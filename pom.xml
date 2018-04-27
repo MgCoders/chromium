@@ -1,0 +1,7 @@
+<project>
+    <artifactId>chromium</artifactId>
+    <version>0.1</version>
+    <urlTest>chromium.magnesium.coop</urlTest>
+    <urlProd>chromium.magnesium.link</urlProd>
+</project>
+
