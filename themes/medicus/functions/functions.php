@@ -157,9 +157,9 @@ function medicus_alter_main_query( $query ) {
             $query->set( 'post__not_in', $postIDs );
         }
 
-     //   if ( count( option::get( 'recent_part_exclude' ) ) ) {
-       //     $query->set( 'cat', '-' . implode( ',-', (array) option::get('recent_part_exclude') ) );
-        //}
+        if ( count( option::get( 'recent_part_exclude' ) ) ) {
+            $query->set( 'cat', '-' . implode( ',-', (array) option::get('recent_part_exclude') ) );
+        }
     }
 }
 endif;
