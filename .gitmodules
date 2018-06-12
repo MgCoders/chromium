@@ -1,3 +1,6 @@
 [submodule "themes/bootstrap"]
 	path = themes/bootstrap
 	url = git@github.com:MgCoders/wp-bootstrap.git
+[submodule "themes/wp-bootstrap-starter"]
+	path = themes/wp-bootstrap-starter
+	url = git@github.com:MgCoders/wp-bootstrap-starter.git
