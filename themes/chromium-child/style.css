@@ -215,6 +215,7 @@ HTML
 
 body {
     font-family: D-DIN, DIN, D-DINExp, D-DINCondensed;
+    color:  #3E5C6F;
 }
 
 .margin-top-40 {
@@ -441,13 +442,43 @@ Extra large devices (large desktops, 1200px and up)
     background-color: #D9E3E8;
 }
 
+.team-container {
+    /*background-color: #B3C7D1;*/
+    background-color: #D9E3E8;
+}
 
 
 /* Override  parent theme*/
 
+
+
 h1 {
     color:  #3E5C6F;
+    font-weight: bold;
+
 }
+
+h2 {
+    color:  #3E5C6F;
+    font-weight: bold;
+}
+
+h3 {
+    color:  #3E5C6F;
+    font-weight: bold;
+}
+
+h4 {
+    color:  #3E5C6F;
+    font-weight: bold;
+}
+
+
+h5 {
+    color:  #3E5C6F;
+    font-weight: bold;
+}
+
 
 
 .font-weight-bold {
