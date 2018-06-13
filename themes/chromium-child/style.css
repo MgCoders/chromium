@@ -12,3 +12,355 @@
  Text Domain:  chromium-child
 */
 
+
+@font-face {
+    font-family: DIN;
+    src: url('fonts/DIN-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: DIN;
+    src: url('fonts/DIN-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: DIN;
+    src: url('fonts/DIN-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: D-DIN;
+    src: url('fonts/D-DIN.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: D-DIN;
+    src: url('fonts/D-DIN-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: D-DIN;
+    src: url('fonts/D-DIN-Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: D-DINCondensed;
+    src: url('fonts/D-DINCondensed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: D-DINCondensed;
+    src: url('fonts/D-DINCondensed-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: D-DINExp;
+    src: url('fonts/D-DINExp.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: D-DINExp;
+    src: url('fonts/D-DINExp-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: D-DINExp;
+    src: url('fonts/D-DINExp-Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+
+
+
+.ribbon { /* cuadrado principal */
+    background: #f47d19;
+    position: relative;
+    height: 30px;
+    width: 120px;
+    margin:0 20px;
+}
+.ribbon:before,
+.ribbon:after {
+    content: '';
+    position: absolute;
+    height:0;
+    border: 15px solid transparent; /* esto es lo hace ver como triangulo, si cambiamos el color se aprecia */
+    top: 0;
+    width: 0;
+    border-top-color: #f47d19; /* color de los triangulos de arriba */
+    border-bottom-color: #f47d19; /* color de los triangulos de abajo */
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: -15px; /* cuantos px se mueve los triangulos de la izq */
+}
+
+.ribbon:after {
+    right: -15px;  /* cuantos px se mueve los triangulos de la derecha */
+}
+
+.ribbon {
+    text-align:center;
+    margin-bottom: 12px;
+}
+
+.msg-ribbon {
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+
+/*
+Alternative ribbon
+
+HTML
+    <div id="ribbon-container">
+        <a href="#" id="ribbon">here's your link</a>
+    </div>
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+}
+
+
+#ribbon-container {
+    position: relative;
+    top: 15px;
+    overflow: visible;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+
+
+#ribbon-container a {
+    display: block;
+    padding: 20px;
+    position: relative;
+
+    background: #0089d2;
+    overflow: visible;
+    height: 58px;
+    margin-left: 29px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#ribbon-container a:after {
+
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -29px;
+    border-top: 29px solid #0089d0;
+    border-bottom: 29px solid #0089d0;
+    border-right: 29px solid transparent;
+    border-left: 29px solid transparent;
+}
+
+#ribbon-container a:before {
+
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -29px;
+    border-top: 29px solid #0089d0;
+    border-bottom: 29px solid #0089d0;
+    border-right: 29px solid transparent;
+    border-left: 29px solid transparent;
+}
+
+#ribbon-container a:hover {
+    background: #009ff1;
+}
+#ribbon-container a:hover:before,
+#ribbon-container a:hover:after {
+    border-top: 29px solid #009ff1;
+    border-bottom: 29px solid #009ff1;
+}
+
+*/
+
+body {
+    font-family: D-DIN, DIN, D-DINExp, D-DINCondensed;
+}
+
+.margin-top-40 {
+    margin-top:40px;
+}
+
+.margin-bottom-40 {
+    margin-bottom:40px;
+}
+
+.padding-lr-10 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h1.page-title {
+    border-bottom: none;
+}
+
+h1.entry-title {
+    border-bottom: none;
+}
+
+.underline {
+    width: 2%;
+    border-bottom: 2px solid #0a0b0d;
+    margin-bottom: 40px;
+}
+
+.
+
+@media (min-width: 576px) {
+    .img-mate {
+        margin-left: 30px;
+    }
+}
+
+ /*
+ Extra small devices (portrait phones, less than 576px)
+ */
+@media (max-width: 575.98px) {  }
+
+ /*
+ Small devices (landscape phones, 576px and up)
+ */
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+
+/*
+Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+/*
+Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+/*
+Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) {  }
+
+
+#logo {
+    width:292px;
+    height:71px;
+}
+
+#logo-footer {
+    height: 80px;
+}
+
+#main-nav {
+    text-transform:uppercase;
+    color: #ffffff;
+
+}
+
+#main-nav .nav-item {
+    margin-right: 10px;
+}
+
+#footer-nav {
+    text-transform:uppercase;
+    color: #ffffff;
+
+}
+
+#footer-nav .nav-item {
+    margin-right: 10px;
+}
+
+
+#pre-footer {
+    background-color:  #3E5C6F;
+    height: 120px;
+
+    display: flex;               /* establish flex container */
+    align-items: center;         /* vertically center flex items */
+
+
+}
+#pre-footer .container {
+
+}
+
+.contact-info {
+    color: #ffffff;
+}
+
+#page-sub-header {
+    height: 575px;
+}
+#page-sub-header h2 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: left;
+    font-size: 40px;
+}
+
+/* Override  parent theme*/
+
+header#masthead {
+    background-color: #3E5C6F;
+}
+
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
+    color: #ffffff;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
+    color: #cccccc;
+}
+
+body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a {
+    color: #ffffff;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a:hover {
+    color: #cccccc;
+}
