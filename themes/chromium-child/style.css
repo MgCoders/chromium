@@ -332,7 +332,7 @@ Extra large devices (large desktops, 1200px and up)
 #page-sub-header h2 {
     color: #ffffff;
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 40%;
     text-align: left;
     font-size: 40px;
 }

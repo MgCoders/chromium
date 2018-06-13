@@ -60,9 +60,8 @@
                 <span class="sep"> | </span>
                 <a class="credits" href="http://magnesium.coop" target="_blank" title="Wordpress Technical Support" alt="Credits">magnesium.coop</a>
 
-            </div><!-- close .site-info -->
-		</div>
--->
+            </div><!-- close .site-info
+		</div-->
 	</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
