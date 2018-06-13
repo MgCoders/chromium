@@ -374,6 +374,50 @@ Extra large devices (large desktops, 1200px and up)
 }
 
 
+.arrow_box-white:after {
+    right: 100%;
+    top: 60%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(217, 227, 232, 0);
+    border-right-color: #ECF1F3;
+    border-width: 15px;
+    margin-top: -30px;
+}
+
+.arrow_box-white p {
+    padding: 4%;
+}
+
+
+.arrow_box-white {
+    position: relative;
+    background: #ECF1F3;
+}
+
+.arrow_box-white:after {
+    right: 100%;
+    top: 60%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(217, 227, 232, 0);
+    border-right-color: #ECF1F3;
+    border-width: 15px;
+    margin-top: -30px;
+}
+
+.arrow_box-white p {
+    padding: 4%;
+}
+
 .margin-left-neg-5 {
     margin-left: -5%;
 }
@@ -386,6 +430,19 @@ Extra large devices (large desktops, 1200px and up)
     margin-top: 10%;
 }
 
+.stage-container,
+.stage-container-dark .container{
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+}
+
+.stage-container-dark {
+    background-color: #D9E3E8;
+}
+
+
+
 /* Override  parent theme*/
 
 h1 {
@@ -395,6 +452,14 @@ h1 {
 
 .font-weight-bold {
     color:  #3E5C6F;
+}
+
+.arrow-dark a.page-scroller {
+    color: #3E5C6F;
+}
+
+.arrow-white a.page-scroller {
+    color: #ECF1F3;
 }
 
 header#masthead {
@@ -422,3 +487,7 @@ body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a {
 body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a:hover {
     color: #cccccc;
 }
+
+
+
+
