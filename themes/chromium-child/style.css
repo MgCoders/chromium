@@ -85,7 +85,7 @@
 
 
 .ribbon { /* cuadrado principal */
-    background: #f47d19;
+    background: #3E5C6F;
     position: relative;
     height: 30px;
     width: 120px;
@@ -99,10 +99,12 @@
     border: 15px solid transparent; /* esto es lo hace ver como triangulo, si cambiamos el color se aprecia */
     top: 0;
     width: 0;
-    border-top-color: #f47d19; /* color de los triangulos de arriba */
-    border-bottom-color: #f47d19; /* color de los triangulos de abajo */
+    border-top-color: #3E5C6F; /* color de los triangulos de arriba */
+    border-bottom-color: #3E5C6F; /* color de los triangulos de abajo */
     z-index: -1;
 }
+
+
 
 .ribbon:before {
     left: -15px; /* cuantos px se mueve los triangulos de la izq */
@@ -242,11 +244,20 @@ h1.entry-title {
 
 .underline {
     width: 2%;
-    border-bottom: 2px solid #0a0b0d;
+    border-bottom: 2px solid #3E5C6F;
     margin-bottom: 40px;
 }
 
-.
+.underline_middle {
+    width: 18%;
+    border-bottom: 2px solid #3E5C6F;
+    margin-bottom: 40px;
+    margin-left: 41%;
+}
+
+.more-space {
+    margin-bottom: 5%;
+}
 
 @media (min-width: 576px) {
     .img-mate {
@@ -337,7 +348,54 @@ Extra large devices (large desktops, 1200px and up)
     font-size: 40px;
 }
 
+
+.arrow_box {
+    position: relative;
+    background: #D9E3E8;
+}
+
+.arrow_box:after {
+    right: 100%;
+    top: 60%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(217, 227, 232, 0);
+    border-right-color: #D9E3E8;
+    border-width: 15px;
+    margin-top: -30px;
+}
+
+.arrow_box p {
+    padding: 4%;
+}
+
+
+.margin-left-neg-5 {
+    margin-left: -5%;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.stage-detail {
+    margin-top: 10%;
+}
+
 /* Override  parent theme*/
+
+h1 {
+    color:  #3E5C6F;
+}
+
+
+.font-weight-bold {
+    color:  #3E5C6F;
+}
 
 header#masthead {
     background-color: #3E5C6F;
