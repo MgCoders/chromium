@@ -10,35 +10,91 @@ get_header(); ?>
 </div><!-- .container -->
 
     <div class="container-fluid team-container">
-    <div class="container text-center">
+    <div class="container text-center  margin-bottom-40">
+
+        <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title text-bold margin-bottom-40">COORDINACIÓN</h6></div> </div>
 
         <div class="row">
             <div class="col-lg-3">
-                <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/01b.png" alt="Generic placeholder image" width="120" height="120">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                <img class="margin-bottom-20" src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/01b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">COORDINADOR GENERAL</p>
+                <p class="text-bold margin-bottom-0">Dr. Hugo Naya</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
-                <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/02b.png" alt="Generic placeholder image" width="120" height="120">
-                <h2>Heading</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                <img  class="margin-bottom-20" src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/02b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold margin-bottom-0">RESPONSABLE TÉCNICA</p>
+                <p class="text-bold margin-bottom-0">Dra. Lucía Spangenberg</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
-                <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/03b.png" alt="Generic placeholder image" width="120" height="120">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                <img class="margin-bottom-20" src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/03b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSABLE FASES I Y II</p>
+                <p class="text-bold margin-bottom-0">Dra. Mónica Sans</p>
+                <p class="small margin-bottom-0">Facultad de Humanidades y</p>
+                <p class="small">Ciencias de la Educación | Udelar</p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3">
-                <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/04b.png" alt="Generic placeholder image" width="120" height="120">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                <img class="small margin-bottom-20" src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/04b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSABLE FASE III</p>
+                <p class="text-bold margin-bottom-0">Dr.(MD) Víctor Raggio</p>
+                <p class="small">Facultad de Medicina | Udelar</p>
             </div><!-- /.col-lg-4 -->
         </div>
     </div>
+
+
+
+        <div class="container text-center  margin-bottom-40">
+
+            <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">INVESTIGADORES ASOCIADOS</h6></div> </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dra. María Inés Fariello</p>
+                    <p class="small">Facultad de Ingeniería | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dra. Luisa Berná</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Natalia Rego</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+            <div class="row justify-content-md-center ">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dr. Héctor Romero</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Diego Simón</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dr.(MD) Nicolás Dell'Oca</p>
+                    <p class="small">Facultad de Medicina | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+        </div>
+
+        <div class="container text-center">
+
+            <div class="row">
+                <div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">ADMINISTRACIÓN Y EJECUCIÓN FINANCIERA</h6></div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="small text-bold margin-bottom-0">Cr. Juan Pablo Texo</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>
+
     </div>
 
 
