@@ -10,14 +10,28 @@ if ( ! function_exists( 'chromium_setup' ) ) :
      */
     function chromium_setup() {
 
-        // This theme uses wp_nav_menu() in one location.
+
         register_nav_menus( array(
             'footer' => esc_html__( 'Footer', 'wp-bootstrap-starter' ),
-        ) );
+        ));
+
+        register_nav_menus( array(
+            'home' => esc_html__( 'Home','wp-boostrap-starter' ),
+        ));
+
+
+
 
     }
 endif;
 add_action( 'after_setup_theme', 'chromium_setup' );
+
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 function theme_enqueue_styles() {
 

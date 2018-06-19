@@ -456,6 +456,23 @@ letter-spacing: 5px;
 font-weight: bold;
 }
 
+.menu-home-text {
+    color:  #3E5C6F;
+    font-size: 0.875rem;
+}
+
+.row-menu-home {
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 6%;
+    margin-bottom: 6%;
+}
+
+.row-menu-home .img-fluid {
+    max-width: 80%;
+    max-width: 150px;
+
+}
+
 /* Override  parent theme*/
 
 
