@@ -41,9 +41,39 @@ function theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         array('magnesium-style'));
 
+
+
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+function my_custom_script_load(){
+    wp_enqueue_script( 'my-custom-script', get_stylesheet_directory_uri() . '/custom.js', array ( 'jquery' ), 1.1, true);
+
+//    wp_enqueue_script( 'my-custom-script', get_stylesheet_directory_uri() . '/custom-scripts', array( 'jquery' ) );
+}
+add_action( 'wp_enqueue_scripts', 'my_custom_script_load' );
+
+
+        // Llamo
+        add_action( 'wp_footer', function() { ?>
+            <script>
+                ( function( $ ) {
+                    'use strict';
+                    $( document ).on( 'ready', function() {
+                            console.log(">>> ready <<<");
+//                            scream()
+                    } );
+                } ( jQuery ) );
+            </script>
+        <?php } );
+
+
+function callit() {
+            ?>
+<script> scream(); </script>
+        <?php
+}
+add_action( 'test','callit');
 
 function wp_list_child_pages() {
 
@@ -73,9 +103,15 @@ function wp_list_child_pages() {
     foreach( $children as $post ) {
         setup_postdata( $post );
 
-        $header = '<div class="entry-header">' . the_title('<h1 class="entry-title">', '</h1><div class="underline"></div>' ) . '</div><!-- .entry-header -->';
+
+        $header = '';
+        if (strtoupper(get_the_title()) != 'EQUIPO') {
+
+            $header = '<div class="entry-header">' . the_title('<h1 class="entry-title">', '</h1><div class="underline"></div>') . '</div><!-- .entry-header -->';
+        }
 
 
+ 
         $string = $header . '<div class="section-container">' . the_content() . '</div>';
     }
     return $string;
@@ -145,6 +181,107 @@ function wp_print_objetivos() {
     return $obj;
 }
 add_shortcode('wp_objetivos', 'wp_print_objetivos');
+
+function wp_print_team() {
+
+    $start_esc = '</div><!-- .row --></div><!-- .container --> </div>'  ;
+
+
+    $row1 = ' <div class="container-fluid team-container  ">
+    <div class="container text-center  margin-bottom-40">
+        <div class="entry-header text-left "><h1 class="entry-title text-white">Equipo</h1><div class="underline" style="border-bottom: 2px solid #FFFFFF;"></div></div>
+        <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title text-bold margin-bottom-40">COORDINACIÓN</h6></div> </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="margin-bottom-20" src="' .  get_stylesheet_directory_uri() . '/img/team/01b.png" alt="Image Hugo" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">COORDINADOR GENERAL</p>
+                <p class="text-bold margin-bottom-0">Dr. Hugo Naya</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img  class="margin-bottom-20" src="' . get_stylesheet_directory_uri() . '/img/team/02b.png" alt="Image Lucia" width="120" height="120">
+                <p class="small text-bold margin-bottom-0">RESPONSABLE TÉCNICA</p>
+                <p class="text-bold margin-bottom-0">Dra. Lucía Spangenberg</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="margin-bottom-20" src="'.  get_stylesheet_directory_uri() . '/img/team/03b.png" alt="Image Monica" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSABLE FASES I Y II</p>
+                <p class="text-bold margin-bottom-0">Dra. Mónica Sans</p>
+                <p class="small margin-bottom-0">Facultad de Humanidades y</p>
+                <p class="small">Ciencias de la Educación | Udelar</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="small margin-bottom-20" src="' .  get_stylesheet_directory_uri() . '/img/team/04b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSABLE FASE III</p>
+                <p class="text-bold margin-bottom-0">Dr.(MD) Víctor Raggio</p>
+                <p class="small">Facultad de Medicina | Udelar</p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>';
+
+
+    $row2 = '<div class="container text-center  margin-bottom-40">
+
+            <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">INVESTIGADORES ASOCIADOS</h6></div> </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dra. María Inés Fariello</p>
+                    <p class="small">Facultad de Ingeniería | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dra. Luisa Berná</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Natalia Rego</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+            <div class="row justify-content-md-center ">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dr. Héctor Romero</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Diego Simón</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dr.(MD) Nicolás Dell\'Oca</p>
+                    <p class="small">Facultad de Medicina | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+        </div>';
+
+
+    $row3 = ' <div class="container text-center">
+
+            <div class="row">
+                <div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">ADMINISTRACIÓN Y EJECUCIÓN FINANCIERA</h6></div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="small text-bold margin-bottom-0">Cr. Juan Pablo Texo</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>';
+    $end_esc = '<div><div><div>';
+
+
+
+
+
+
+    return $start_esc . $row1 .  $row2 . $row3 . $end_esc;
+}
+add_shortcode('wp_team', 'wp_print_team');
 
 
 ?>

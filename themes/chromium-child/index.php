@@ -5,9 +5,17 @@
  * Time: 07:11 PM
  */
 
-get_header(); ?>
+get_header();
+
+echo 'hola';
 
 
+
+    ?>
+
+<script>
+    scream();
+</script>
 
 
 
