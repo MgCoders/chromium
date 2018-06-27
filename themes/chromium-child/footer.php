@@ -14,6 +14,7 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
+
     <?php get_template_part( 'footer-widget' ); ?>
 
     <div id="pre-footer">

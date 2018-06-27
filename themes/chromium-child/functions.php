@@ -272,7 +272,7 @@ function wp_print_team() {
                 </div><!-- /.col-lg-4 -->
             </div>
         </div>';
-    $end_esc = '<div><div><div>';
+    $end_esc = '<div><div>';
 
 
 
@@ -282,6 +282,65 @@ function wp_print_team() {
     return $start_esc . $row1 .  $row2 . $row3 . $end_esc;
 }
 add_shortcode('wp_team', 'wp_print_team');
+
+function main_menu_html() {
+  $obj = '<div class="container margin-top-5porc">
+                <div class="row-menu-home">
+                <div class="row  justify-content-md-center text-center ">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="' .  get_home_url() . '/nosotros">
+                        <picture>
+                            <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" type="image/svg+xml" >
+                            <img src="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" class="img-fluid" alt="Nosotros">
+                        </picture>
+                        <div class="menu-home-text ">NOSOTROS</div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="' . get_home_url() . '/el-proyecto">
+                        <picture>
+                            <source  srcset="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" type="image/svg+xml" >
+                            <img src="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" class="img-fluid" alt="El proyecto">
+                        </picture>
+                            <div class="menu-home-text  ">EL PROYECTO</div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="' . get_home_url() .'/publicaciones">
+                        <picture>
+                            <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" type="image/svg+xml" >
+                            <img src="' .  get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" class="img-fluid" alt="Publicaciones" >
+                        </picture>
+                            <div class="menu-home-text">PUBLICACIONES</div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="<?php echo get_home_url() ?>/prensa">
+                        <picture>
+                            <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/04-press.svg" type="image/svg+xml" >
+                            <img src="' .  get_stylesheet_directory_uri() . '/img/icons/04-press.svg" class="img-fluid" alt="Prensa">
+                        </picture>
+                            <div class="menu-home-text  ">PRENSA</div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-sm-12">
+                        <a href="<?php echo get_home_url() ?>/base-de-datos">
+                        <picture>
+                            <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" type="image/svg+xml" >
+                            <img src="'.  get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" class="img-fluid" alt="Bases de datos">
+                        </picture>
+                            <div class="menu-home-text ">DATABASES</div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>';
+  return $obj;
+}
 
 
 ?>

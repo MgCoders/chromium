@@ -7,7 +7,6 @@
 
 get_header();
 
-echo 'hola';
 
 
 
@@ -17,64 +16,9 @@ echo 'hola';
     scream();
 </script>
 
+    <?php echo main_menu_html(); ?>
 
 
-
-            <div class="container">
-                <div class="row-menu-home">
-                <div class="row  justify-content-md-center text-center ">
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="<?php echo get_home_url() ?>/nosotros">
-                        <picture>
-                            <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/01-about-us.svg" type="image/svg+xml" >
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/01-about-us.svg" class="img-fluid" alt="Nosotros">
-                        </picture>
-                        <div class="menu-home-text ">NOSOTROS</div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="<?php echo get_home_url() ?>/el-proyecto">
-                        <picture>
-                            <source  srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" type="image/svg+xml" >
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" class="img-fluid" alt="El proyecto">
-                        </picture>
-                            <div class="menu-home-text  ">EL PROYECTO</div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="<?php echo get_home_url() ?>/publicaciones">
-                        <picture>
-                            <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/03-publications.svg" type="image/svg+xml" >
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/03-publications.svg" class="img-fluid" alt="Publicaciones" >
-                        </picture>
-                            <div class="menu-home-text ">PUBLICACIONES</div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="<?php echo get_home_url() ?>/prensa">
-                        <picture>
-                            <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/04-press.svg" type="image/svg+xml" >
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/04-press.svg" class="img-fluid" alt="Prensa">
-                        </picture>
-                            <div class="menu-home-text  ">PRENSA</div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-sm-12">
-                        <a href="<?php echo get_home_url() ?>/base-de-datos">
-                        <picture>
-                            <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/05-databases.svg" type="image/svg+xml" >
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/05-databases.svg" class="img-fluid" alt="Bases de datos">
-                        </picture>
-                            <div class="menu-home-text ">DATABASES</div>
-                        </a>
-                    </div>
-                </div>
-                </div>
-            </div>
     <section id="primary" class="content-area col-sm-12 col-md-12 ">
         <main id="main" class="site-main" role="main">
 
@@ -111,6 +55,116 @@ echo 'hola';
 
         </main><!-- #main -->
     </section><!-- #primary -->
+
+
+</div>
+</div>
+
+    <div class="container-fluid bg-grey padding-bottom-2 padding-top-2">
+
+        <div class="container">
+
+            <div class="row  justify-content-center">
+                <div id="partners-top-left" class="col-6">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-6">
+                        <picture>
+                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo2.svg" type="image/svg+xml" >
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                        </picture>
+
+                    </div>
+                    <div class="col-6">
+                        <picture>
+                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo3.svg" type="image/svg+xml" >
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo3.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                        </picture>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="partners-top-right" class="col-6">
+
+
+
+                    <div class="row">
+                    <div class="col-6">
+                        <div class="row  justify-content-center">
+                            <div class="col-6 text-center">
+                                <h6 class="letter-spacing-title text-bold margin-bottom-40">APOYA</h6>
+                            </div>
+                        </div>
+                        <picture>
+                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo4.svg" type="image/svg+xml" >
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo4.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                        </picture>
+                    </div>
+                    <div class="col-6">
+                        <div class="row justify-content-center">
+                            <div class="col-6 text-center">
+                                <h6 class="letter-spacing-title text-bold margin-bottom-40">FINANCIA</h6>
+                            </div>
+                        </div>
+                        <picture>
+                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo5.svg" type="image/svg+xml" >
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo5.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                        </picture>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="row margin-top-5porc  justify-content-center">
+                <div id="partners-bottom" class="col-12">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS ESTRATEGICOS</h6>
+                        </div>
+                    </div>
+                    <div class="row  justify-content-center">
+                        <div class="col-3">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo1.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            </picture>
+
+                        </div>
+
+                        <div class="col-3">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo7.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo7.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            </picture>
+                        </div>
+
+                        <div class="col-3">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo8.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo8.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            </picture>
+                        </div>
+                        <div class="col-3">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo6.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div> <!-- .container -->
+    </div>
+
 
 <?php
 

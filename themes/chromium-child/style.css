@@ -491,16 +491,25 @@ font-weight: bold;
 
 }
 
+.bg-grey,
 .bg-title-page {
     background-color: #F7F7F7;
-    margin-top: -4.125rem;
+
 }
 
 .limit-width {
     max-width: 120px;
 }
 
+.margin-top-5porc {
+    margin-top: 5%;
+}
+
 /* Override  parent theme*/
+
+#content.site-content {
+    padding: 0;
+}
 
 
 h1.page-title {
