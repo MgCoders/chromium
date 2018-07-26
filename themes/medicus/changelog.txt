@@ -1,9 +1,0 @@
-Medicus
-http://www.wpzoom.com/themes/medicus/
-
-CHANGELOG
----------
-
-v 1.0 (October 18, 2015)
-
-	- initial release
