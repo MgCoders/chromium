@@ -122,7 +122,7 @@ get_header();
                 <div id="partners-bottom" class="col-12">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS ESTRATEGICOS</h6>
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS ESTRAT&Eacute;GICOS</h6>
                         </div>
                     </div>
                     <div class="row  justify-content-center">
@@ -153,6 +153,25 @@ get_header();
                                 <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
                             </picture>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-5porc  justify-content-center">
+                <div id="partners-bottom" class="col-12">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40">COORDINADOR</h6>
+                        </div>
+                    </div>
+                    <div class="row  justify-content-center">
+                        <div class="col-3">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo1.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            </picture>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
