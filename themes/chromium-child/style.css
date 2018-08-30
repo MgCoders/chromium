@@ -625,6 +625,16 @@ body:not(.theme-preset-active) footer#colophon {
     font-size: 10px;
 }
 
+.topcorner{
+    position:absolute;
+    top:50px;
+    right:20px;
+}
+.topcorner li {
+    float: left;
+    list-style: none;
+}
+
 /** partners **/
 #partners-top-left,
 #partners-top-right,
