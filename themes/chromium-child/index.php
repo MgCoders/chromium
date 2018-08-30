@@ -22,36 +22,26 @@ get_header();
     <section id="primary" class="content-area col-sm-12 col-md-12 ">
         <main id="main" class="site-main" role="main">
 
-            <?php
-            if ( have_posts() ) :
+            <?php $my_query = new WP_Query('category_name=Home&showposts=1'); ?>
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+            <div class="row" style="margin-top: 5%;margin-bottom: 10%">
+                <div class="col-5">
+                    <?php  the_post_thumbnail(); ?>
+                </div>
+                <div class="col-1">
 
-                if ( is_home() && ! is_front_page() ) : ?>
-                    <header>
-                        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                    </header>
+                </div>
+                <div class="col-6">
+                    <h3><?php the_title(); ?></h3>
+                    <p class="text-justify">
+                        <?php the_content(); ?>
+                    </p>
+                </div>
+            </div>
+            <?php endwhile; ?>
 
-                <?php
-                endif;
 
-                /* Start the Loop */
-                while ( have_posts() ) : the_post();
 
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part( 'template-parts/content', get_post_format() );
-
-                endwhile;
-
-                the_posts_navigation();
-
-            else :
-
-                get_template_part( 'template-parts/content', 'none' );
-
-            endif; ?>
 
         </main><!-- #main -->
     </section><!-- #primary -->
@@ -72,19 +62,20 @@ get_header();
                         </div>
                     </div>
                     <div class="row">
-                    <div class="col-6">
-                        <picture>
-                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo2.svg" type="image/svg+xml" >
-                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
-                        </picture>
+                        <div class="col-6">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo3.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo3.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
+                            </picture>
+                        </div>
+                        <div class="col-6">
+                            <picture>
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo2.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
+                            </picture>
 
-                    </div>
-                    <div class="col-6">
-                        <picture>
-                            <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo3.svg" type="image/svg+xml" >
-                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo3.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
-                        </picture>
-                    </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -101,7 +92,7 @@ get_header();
                         </div>
                         <picture>
                             <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo4.svg" type="image/svg+xml" >
-                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo4.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo4.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
                         </picture>
                     </div>
                     <div class="col-6">
@@ -112,7 +103,7 @@ get_header();
                         </div>
                         <picture>
                             <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo5.svg" type="image/svg+xml" >
-                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo5.svg" class="img-fluid" alt="" style="  height: 50px;width: auto; ">
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo5.svg" class="img-fluid" alt="" style="  height: 40px;width: auto; ">
                         </picture>
                     </div>
                     </div>
@@ -128,32 +119,50 @@ get_header();
                     <div class="row  justify-content-center">
 
 
-                        <div class="col-3">
+                        <div id="fcien" class="col-3">
                             <picture>
                                 <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo1.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
                             </picture>
-
+                            <div class="margin-top-5porc">
+                                <p class=" margin-bottom-0">Dr. H&eacute;ctor Romero</p>
+                                <p class=" margin-bottom-0"><small>Facultad de Ciencias | Udelar</small></p>
+                            </div>
                         </div>
-                        <div class="col-3">
+                        <div id="lund" class="col-3">
                             <picture>
                                 <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo6.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
                             </picture>
+                            <div class="margin-top-5porc">
+                                <p class=" margin-bottom-0">Dr. Carlos Rovira</p>
+                                <p class=" margin-bottom-0"><small>Univesidad de Lund | Suecia</small></p>
+                            </div>
                         </div>
 
 
-                        <div class="col-3">
+                        <div id="wisconsin" class="col-3">
                             <picture>
                                 <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo8.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo8.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo8.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
                             </picture>
+                            <div class="margin-top-5porc">
+                                <p class=" margin-bottom-0">Dr. Daniel Gianola</p>
+                                <p class=" margin-bottom-0"><small>Univesidad de Wisconsin | Madison</small></p>
+                            </div>
                         </div>
-                        <div class="col-3">
+
+
+                        <div id="humanidades" class="col-3">
                             <picture>
                                 <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo7.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo7.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo7.svg" class="img-fluid" alt="" style="height: 70px;width: auto; ">
                             </picture>
+                            <div class="margin-top-5porc">
+                                <p class=" margin-bottom-0">Dra. M&oacute;nica Sans</p>
+                                <p class=" margin-bottom-0"><small>Facultad de Humanidades y</small></p>
+                                <p><small>Ciencias de la Educaci&oacute;n | Udelar</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>

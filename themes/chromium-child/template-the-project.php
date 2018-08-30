@@ -7,9 +7,24 @@
 get_header(); ?>
 
 
+    </div><!-- .row -->
+    </div><!-- .container -->
 
+    <div class="container-fluid bg-title-page margin-bottom-40">
+        <div class="row justify-content-md-center align-items-center no-gutters padding-top-2 padding-bottom-2">
+            <div class="col-2 limit-width">
+                <picture>
+                    <source  srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" type="image/svg+xml" >
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" class="img-fluid" alt="The project">
+                </picture>
+            </div>
+            <div class="col-2">
+                <h4 class="align-middle margin-bottom-0 "><? echo strtoupper(get_the_title()) ?></h4>
+            </div>
 
+        </div>
 
+    </div>
 
 
     <div class="container">
@@ -24,7 +39,7 @@ get_header(); ?>
                     <?php
                     while ( have_posts() ) : the_post();
 
-                        get_template_part( 'template-parts/content', 'page' );
+                        get_template_part( 'template-parts/content-notitle', 'page' );
 
                         // If comments are open or we have at least one comment, load up the comment template.
                         if ( comments_open() || get_comments_number() ) :

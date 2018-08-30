@@ -318,7 +318,7 @@ function main_menu_html() {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="<?php echo get_home_url() ?>/prensa">
+                        <a href="' . get_home_url() .'/prensa">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/04-press.svg" type="image/svg+xml" >
                             <img src="' .  get_stylesheet_directory_uri() . '/img/icons/04-press.svg" class="img-fluid" alt="Prensa">
@@ -328,7 +328,7 @@ function main_menu_html() {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-12">
-                        <a href="<?php echo get_home_url() ?>/base-de-datos">
+                        <a href="' . get_home_url() .'/base-de-datos">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" type="image/svg+xml" >
                             <img src="'.  get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" class="img-fluid" alt="Bases de datos">

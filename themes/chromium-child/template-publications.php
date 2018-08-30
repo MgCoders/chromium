@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: About us
+ * Template Name: Publications
  */
 
 get_header(); ?>
@@ -15,8 +15,8 @@ get_header(); ?>
         <div class="row justify-content-md-center align-items-center no-gutters padding-top-2 padding-bottom-2">
             <div class="col-2 limit-width">
                 <picture>
-                    <source  srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/01-about-us.svg" type="image/svg+xml" >
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/01-about-us.svg" class="img-fluid" alt="About Us">
+                    <source  srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/03-publications.svg" type="image/svg+xml" >
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/03-publications.svg" class="img-fluid" alt="Publications">
                 </picture>
             </div>
             <div class="col-2">
@@ -44,8 +44,8 @@ get_header(); ?>
             endwhile; // End of the loop.
             ?>
 
-        </main><!-- #main -->
-    </section><!-- #primary -->
+            </main><!-- #main -->
+            </section><!-- #primary -->
 
 
 
