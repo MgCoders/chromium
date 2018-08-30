@@ -54,6 +54,24 @@
     </div>
 
 	<footer id="colophon" class="site-footer " role="contentinfo">
+        <div class="container">
+            <div class="site-info">
+
+                <p class="designed-by">
+                    <?php printf( __( 'Developed and designed by %s', 'Magnesium.coop' ), '<a href="http://magnesium.coop/" target="_blank" rel="designer">Magnesium</a>' ); ?> &
+                    <a href="mailto:hola@flobrizuela.com" target="_blank" rel="designer">Flor Brizuela</a>
+                </p>
+                <p class="copyright">
+                    <?php _e( 'Copyright', 'Urugenomes' ); ?> &copy; <?php echo date( 'Y' ); ?> &mdash; <?php bloginfo('name'); ?>. <?php _e( 'Todos los derechos reservados', 'wpzoom' ); ?>
+                </p>
+                <!-- <p class="copyright">
+                    <?php /*_e( 'Copyright', 'magnesium' ); */?> &copy; <?php /*echo date( 'Y' ); */?> &mdash; <?php /*bloginfo('name'); */?>. <?php /*_e( 'All Rights Reserved', 'wpzoom' ); */?>
+                </p>
+                <p class="designed-by">
+                    <?php /*printf( __( 'Designed by %s', 'wpzoom' ), '<a href="http://www.wpzoom.com/" target="_blank" rel="designer">WPZOOM</a>' ); */?>
+                </p>-->
+            </div><!-- .site-info -->
+        </div>
 
 		<!--<div class="container pt-3 pb-3">
             <div class="site-info">

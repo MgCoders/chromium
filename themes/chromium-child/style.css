@@ -600,10 +600,29 @@ body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a:hover {
 }
 
 
+body:not(.theme-preset-active) footer#colophon {
+    color: #99979c;
+    background-color: #3E5C6F;
+}
 
+body:not(.theme-preset-active) footer#colophon {
+    color: #ffffff;
+    background-color: #3E5C6F;
+}
+.designed-by {
+    text-align: center;
+    font-size: 10px;
+}
 
-.team-title {
-    background-color: black;
+.designed-by {
+    text-align: center;
+    font-size: 10px;
+}
+
+.copyright {
+    display: none;
+    text-align: right;
+    font-size: 10px;
 }
 
 /** partners **/
