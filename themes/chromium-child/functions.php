@@ -105,7 +105,7 @@ function wp_list_child_pages() {
 
 
         $header = '';
-        if (strtoupper(get_the_title()) != 'EQUIPO') {
+        if (strtoupper(get_the_title()) != 'EQUIPO' && strtoupper(get_the_title()) != 'TEAM') { // Hack to avoid problem with background color
 
             $header = '<div class="entry-header">' . the_title('<h1 class="entry-title">', '</h1><div class="underline"></div>') . '</div><!-- .entry-header -->';
         }
@@ -182,7 +182,168 @@ function wp_print_objetivos() {
 }
 add_shortcode('wp_objetivos', 'wp_print_objetivos');
 
+function wp_print_objetives() {
+
+    $obj = '<div class="row  justify-content-md-center margin-top-40">
+            <div class="col-2">
+                <div class="ribbon"><span class="msg-ribbon">IMPROVE</span></div>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+                <div class="ribbon"><span class="msg-ribbon">PRODUCE</span></div>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+                <div class="ribbon"><span class="msg-ribbon">FOSTER</span></div>
+            </div>
+        </div>
+
+        <div class="row  justify-content-md-center">
+            <div class="col-3">
+                <div class="small text-justify">the training of researchers working in genomics in Uruguay through the creation of a program with South Korea.</div>
+            </div>
+            <div class="col-3">
+                <div class="small text-justify">scientific and technical advances in the sequencing and analysis of human genomes in Uruguay.</div>
+            </div>
+            <div class="col-3">
+                <div class="small text-justify">the creation of companies and laboratories that can export services in the field of genomics.</div>
+            </div>
+        </div>
+
+
+
+        <div class="row justify-content-md-center margin-top-40">
+            <div class="col-2">
+                <div class="ribbon"><span class="msg-ribbon">ENCOURAGE</span></div>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+                <div class="ribbon"><span class="msg-ribbon">SPREAD</span></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-3">
+                <div class="small text-justify"> integration in the field of genomics with Latin America.</div>
+            </div>
+            <div class="col-3">
+                <div class="small text-justify"> the advances of human genomic research to scientific and academic communities related to the pharmaceutical and social sector.
+                </div>
+
+            </div>
+        </div>';
+
+    return $obj;
+}
+add_shortcode('wp_objetives', 'wp_print_objetives');
+
 function wp_print_team() {
+
+    $start_esc = '</div><!-- .row --></div><!-- .container --> </div>'  ;
+
+
+    $row1 = ' <div class="container-fluid team-container  ">
+    <div class="container text-center  margin-bottom-40">
+        <div class="entry-header text-left "><h1 class="entry-title text-white">Team</h1><div class="underline" style="border-bottom: 2px solid #FFFFFF;"></div></div>
+        <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title text-bold margin-bottom-40">COORDINATION</h6></div> </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="margin-bottom-20" src="' .  get_stylesheet_directory_uri() . '/img/team/01b.png" alt="Image Hugo" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CHIEF COORDINATOR</p>
+                <p class="text-bold margin-bottom-0">PhD. Hugo Naya</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img  class="margin-bottom-20" src="' . get_stylesheet_directory_uri() . '/img/team/02b.png" alt="Image Lucia" width="120" height="120">
+                <p class="small text-bold margin-bottom-0">TECHNICAL RESPONSIBLE</p>
+                <p class="text-bold margin-bottom-0">PhD. Lucía Spangenberg</p>
+                <p class="small">Institut Pasteur de Montevideo</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="margin-bottom-20" src="'.  get_stylesheet_directory_uri() . '/img/team/03b.png" alt="Image Monica" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSIBLE PHASES I AND II</p>
+                <p class="text-bold margin-bottom-0">PhD. Mónica Sans</p>
+                <p class="small margin-bottom-0">Facultad de Humanidades y</p>
+                <p class="small">Ciencias de la Educación | Udelar</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="small margin-bottom-20" src="' .  get_stylesheet_directory_uri() . '/img/team/04b.png" alt="Generic placeholder image" width="120" height="120">
+                <p class="small text-bold  margin-bottom-0">CO-RESPONSIBLE PHASE III</p>
+                <p class="text-bold margin-bottom-0">Dr.(MD) Víctor Raggio</p>
+                <p class="small">Facultad de Medicina | Udelar</p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>';
+
+
+    $row2 = '<div class="container text-center  margin-bottom-40">
+
+            <div class="row"><div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">ASSOCIATED RESEARCHERS</h6></div> </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">PhD. María Inés Fariello</p>
+                    <p class="small">Facultad de Ingeniería | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">PhD. Luisa Berná</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Natalia Rego</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+            <div class="row justify-content-md-center ">
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">PhD. Héctor Romero</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">MSc. Diego Simón</p>
+                    <p class="small">Facultad de Ciencias | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <p class="small text-bold margin-bottom-0">Dr.(MD) Nicolás Dell\'Oca</p>
+                    <p class="small">Facultad de Medicina | Udelar</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+
+        </div>';
+
+
+    $row3 = ' <div class="container text-center">
+
+            <div class="row">
+                <div class="col-12 text-center"><h6 class="text-white letter-spacing-title  text-bold  margin-bottom-40">ADMINISTRATION AND FINANCIAL EXECUTION</h6></div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12">
+                    <p class="small text-bold margin-bottom-0">C.P. Juan Pablo Texo</p>
+                    <p class="small">Institut Pasteur de Montevideo</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>';
+    $end_esc = '<div><div>';
+
+
+
+
+
+
+    return $start_esc . $row1 .  $row2 . $row3 . $end_esc;
+}
+add_shortcode('wp_team', 'wp_print_team');
+
+function wp_print_equipo() {
 
     $start_esc = '</div><!-- .row --></div><!-- .container --> </div>'  ;
 
@@ -281,9 +442,40 @@ function wp_print_team() {
 
     return $start_esc . $row1 .  $row2 . $row3 . $end_esc;
 }
-add_shortcode('wp_team', 'wp_print_team');
+add_shortcode('wp_equipo', 'wp_print_equipo');
 
-function main_menu_html() {
+
+function translateArray($str_index) {
+    $en['NOSOTROS'] = "ABOUT US";
+    $en['EL PROYECTO'] = "THE PROJECT";
+    $en['PUBLICACIONES'] = "PUBLICATIONS";
+    $en['PRENSA'] = "PRESS";
+    $en['BASES DE DATOS'] = "DATABASES";
+
+    $en['Proyectando la genómica uruguaya al mundo'] = 'Projecting Uruguayan genomics to the world';
+    $en['Universidad de Wisconsin | Madison'] = 'University of Wisconsin | Madison';
+    $en['Universidad de Lund | Suecia'] = 'University of Lund | Sweden';
+
+    if (array_key_exists($str_index, $en)) {
+        return $en[$str_index];
+    }
+    else {
+        return $str_index;
+    }
+
+}
+function getNameInEnglish( $en, $name) {
+    if (!$en) {
+        return $name;
+    }
+    else {
+        return translateArray($name);
+    }
+}
+
+function main_menu_html( $en ) {
+
+
   $obj = '<div class="container margin-top-5porc">
                 <div class="row-menu-home">
                 <div class="row  justify-content-md-center text-center ">
@@ -293,7 +485,7 @@ function main_menu_html() {
                             <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" type="image/svg+xml" >
                             <img src="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" class="img-fluid" alt="Nosotros">
                         </picture>
-                        <div class="menu-home-text ">NOSOTROS</div>
+                        <div class="menu-home-text ">' . getNameInEnglish($en,"NOSOTROS") . '</div>
                         </a>
                     </div>
 
@@ -303,7 +495,7 @@ function main_menu_html() {
                             <source  srcset="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" type="image/svg+xml" >
                             <img src="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" class="img-fluid" alt="El proyecto">
                         </picture>
-                            <div class="menu-home-text  ">EL PROYECTO</div>
+                            <div class="menu-home-text  ">' . getNameInEnglish($en,"EL PROYECTO") . '</div>
                         </a>
                     </div>
 
@@ -313,7 +505,7 @@ function main_menu_html() {
                             <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" type="image/svg+xml" >
                             <img src="' .  get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" class="img-fluid" alt="Publicaciones" >
                         </picture>
-                            <div class="menu-home-text">PUBLICACIONES</div>
+                            <div class="menu-home-text">' . getNameInEnglish($en,"PUBLICACIONES") . '</div>
                         </a>
                     </div>
 
@@ -323,7 +515,7 @@ function main_menu_html() {
                             <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/04-press.svg" type="image/svg+xml" >
                             <img src="' .  get_stylesheet_directory_uri() . '/img/icons/04-press.svg" class="img-fluid" alt="Prensa">
                         </picture>
-                            <div class="menu-home-text  ">PRENSA</div>
+                            <div class="menu-home-text  ">' . getNameInEnglish($en,"PRENSA") . '</div>
                         </a>
                     </div>
 
@@ -333,13 +525,22 @@ function main_menu_html() {
                             <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" type="image/svg+xml" >
                             <img src="'.  get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" class="img-fluid" alt="Bases de datos">
                         </picture>
-                            <div class="menu-home-text ">DATABASES</div>
+                            <div class="menu-home-text ">' . getNameInEnglish($en,"BASES DE DATOS") . '</div>
                         </a>
                     </div>
                 </div>
                 </div>
             </div>';
   return $obj;
+}
+
+function is_english() {
+    if (pll_current_language() == 'en') {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 

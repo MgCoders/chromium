@@ -16,13 +16,22 @@ get_header();
     scream();
 </script>
 
-    <?php echo main_menu_html(); ?>
+    <?php echo main_menu_html(is_english()); ?>
 
 
     <section id="primary" class="content-area col-sm-12 col-md-12 ">
         <main id="main" class="site-main" role="main">
 
-            <?php $my_query = new WP_Query('category_name=Home&showposts=1'); ?>
+            <?php if (is_english()) {
+                    $my_query = new WP_Query('category_name=Home&showposts=1');
+
+                }
+                else {
+                    $my_query = new WP_Query('category_name=Inicio&showposts=1');
+                }
+            ?>
+
+
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
             <div class="row" style="margin-top: 5%;margin-bottom: 10%">
                 <div class="col-5">
@@ -136,7 +145,7 @@ get_header();
                             </picture>
                             <div class="margin-top-5porc">
                                 <p class=" margin-bottom-0">Dr. Carlos Rovira</p>
-                                <p class=" margin-bottom-0"><small>Univesidad de Lund | Suecia</small></p>
+                                <p class=" margin-bottom-0"><small><?php echo getNameInEnglish(is_english(),'Universidad de Lund | Suecia') ?></small></p>
                             </div>
                         </div>
 
@@ -148,7 +157,7 @@ get_header();
                             </picture>
                             <div class="margin-top-5porc">
                                 <p class=" margin-bottom-0">Dr. Daniel Gianola</p>
-                                <p class=" margin-bottom-0"><small>Univesidad de Wisconsin | Madison</small></p>
+                                <p class=" margin-bottom-0"><small> <?php echo getNameInEnglish(is_english(),'Universidad de Wisconsin | Madison') ?> </small></p>
                             </div>
                         </div>
 

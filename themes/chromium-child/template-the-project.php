@@ -73,7 +73,11 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-6 align-self-center">
-                            <h5 class="font-weight-bold margin-bottom-0">Estudios de ancestría en dos grupos étnicos de Uruguay</h5>
+                        <?php while ( have_posts() ) : the_post(); ?>
+
+                            <h5 class="font-weight-bold margin-bottom-0"><? if (is_english()) echo get_field( "phase_1_title" ); else echo get_field( "titulo_etapa_1" ); ?></h5>
+                        <?php endwhile; // end of the loop. ?>
+
                         </div>
                     </div>
                 </div>
