@@ -107,12 +107,12 @@ get_header();
                     <div class="col-6">
                         <div class="row justify-content-center">
                             <div class="col-6 text-center">
-                                <h6 class="letter-spacing-title text-bold margin-bottom-40">FINANCIA</h6>
+                                <h6 class="letter-spacing-title text-bold margin-bottom-60">FINANCIA</h6>
                             </div>
                         </div>
                         <picture>
                             <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo5.svg" type="image/svg+xml" >
-                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo5.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                            <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo5.svg" class="img-fluid" alt="" style="  height: 50px;width: auto; ">
                         </picture>
                     </div>
                     </div>
@@ -126,6 +126,8 @@ get_header();
                         </div>
                     </div>
                     <div class="row  justify-content-center">
+
+
                         <div class="col-3">
                             <picture>
                                 <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo1.svg" type="image/svg+xml" >
@@ -133,13 +135,13 @@ get_header();
                             </picture>
 
                         </div>
-
                         <div class="col-3">
                             <picture>
-                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo7.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo7.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo6.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
                             </picture>
                         </div>
+
 
                         <div class="col-3">
                             <picture>
@@ -149,8 +151,8 @@ get_header();
                         </div>
                         <div class="col-3">
                             <picture>
-                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo6.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo6.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
+                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo7.svg" type="image/svg+xml" >
+                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo7.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
                             </picture>
                         </div>
                     </div>
@@ -164,13 +166,10 @@ get_header();
                         </div>
                     </div>
                     <div class="row  justify-content-center">
-                        <div class="col-3">
-                            <picture>
-                                <source srcset=" <?php echo get_stylesheet_directory_uri(); ?>/img/partners/logo1.svg" type="image/svg+xml" >
-                                <img src="'<?php echo get_stylesheet_directory_uri(); ?>'/img/partners/logo2.svg" class="img-fluid" alt="" style="height: 80px;width: auto; ">
-                            </picture>
+                        <div class="col-lg-4">
+                            <p class=" margin-bottom-0">Dr. Hugo Naya | <small>Institut Pasteur de Montevideo</small></p>
 
-                        </div>
+                        </div><!-- /.col-lg-4 -->
 
                     </div>
                 </div>

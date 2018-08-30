@@ -429,6 +429,10 @@ Extra large devices (large desktops, 1200px and up)
     margin-bottom:40px;
 }
 
+.margin-bottom-60 {
+    margin-bottom: 60px;
+}
+
 .padding-lr-10 {
     padding-right: 10px;
     padding-left: 10px;
@@ -597,4 +601,11 @@ body:not(.theme-preset-active) #pre-footer .navbar-nav > li > a:hover {
 
 .team-title {
     background-color: black;
+}
+
+/** partners **/
+#partners-top-left,
+#partners-top-right,
+#partners-bottom {
+    text-align: center;
 }
