@@ -19,7 +19,7 @@ get_header(); ?>
                 </picture>
             </div>
             <div class="col-2">
-                <h4 class="align-middle margin-bottom-0 "><? echo strtoupper(get_the_title()) ?></h4>
+                <h4 class="align-middle margin-bottom-0 "><?php echo strtoupper(get_the_title()) ?></h4>
             </div>
 
         </div>
@@ -59,10 +59,12 @@ get_header(); ?>
 
     </div>
 
+
     <!-- stage 01 -->
     <div class="container-fluid stage-container">
         <div class="container">
             <div class="row">
+                <?php while ( have_posts() ) : the_post(); ?>
                 <div class="col-6">
                     <div class="row">
                         <div class="col-1"></div>
@@ -73,10 +75,10 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-6 align-self-center">
-                        <?php while ( have_posts() ) : the_post(); ?>
+
 
                             <h5 class="font-weight-bold margin-bottom-0"><? if (is_english()) echo get_field( "phase_1_title" ); else echo get_field( "titulo_etapa_1" ); ?></h5>
-                        <?php endwhile; // end of the loop. ?>
+
 
                         </div>
                     </div>
@@ -84,21 +86,19 @@ get_header(); ?>
                 <div class="col-5 align-self-center">
                     <div class="arrow_box">
                         <p class="margin-bottom-0">
-                            La primera fase del proyecto se centró en determinar y
-                            caracterizar la variabilidad genética en dos grupos étnicos en
-                            nuestro país: los descendientes indígenas y africanos.
-                            Para determinar esto, se utilizó la secuenciación del
-                            genoma completo.
+                            <? if (is_english()) echo get_field( "description_phase_1" ); else echo get_field( "descripcion_etapa_1"); ?>
                         </p>
                     </div>
                 </div>
-            </div>
+                <?php endwhile; // end of the loop. ?>
+
+    </div>
 
             <div class="row stage-detail">
                 <div class="col-6 ">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4>OBJETIVOS ESPECÍFICOS</h4>
+                            <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Secuenciar 10 individuos de cada grupo étnico, con un “coverage” esperado de 30x.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_1_phase_1" ); else echo get_field( "objetivo_especifico_1_etapa_1"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -124,7 +124,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Realizar un análisis de variación en cada grupo y comparar los datos con los resultados de otros proyectos internacionales, como el “1000 genomes”.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_2_phase_1" ); else echo get_field( "objetivo_especifico_2_etapa_1"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -136,8 +136,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Identificar los patrones de variabilidad genética de los
-                                grupos y relacionarla con los datos históricos existentes y estudios antropológicos previos.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_3_phase_1" ); else echo get_field( "objetivo_especifico_3_etapa_1"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -149,10 +148,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Comparar los resultados obtenidos en términos de
-                                ancestría a través del estudio del genoma completo
-                                con los resultados previos a partir de marcadores
-                                mitocondriales y del cromosoma Y.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_4_phase_1" ); else echo get_field( "objetivo_especifico_4_etapa_1"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -164,8 +160,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">En el caso del grupo étnico descendientes de indígenas
-                                se procurará la reconstrucción del mayor número posible de haplotipos a nivel genómico, procurando identificar aquellos que no hayan sido previamente reportados.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_5_phase_1" ); else echo get_field( "objetivo_especifico_5_etapa_1"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -177,7 +172,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Desarrollo de una base de datos con la información genómica, accesible públicamente y una serie de herramientas para facilitar el análisis de la información contenida.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_6_phase_1" ); else echo get_field( "objetivo_especifico_6_etapa_1"); ?></p>
                         </div>
                     </div>
                 </div>
@@ -185,26 +180,19 @@ get_header(); ?>
 
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4 class="text-center">RESULTADOS ESPERADOS</h4>
+                            <h4 class="text-center"><? if (is_english()) echo "EXPECTED RESULTS"; else echo "RESULTADOS ESPERADOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
 
                     <p class="text-justify" style="margin-top: 4%;">
-                        Tener la caracterización de la variabilidad genética observada en ambos grupos étnicos y su
-                        comparación con el conocimiento histórico y antropológico previo. También se espera
-                        constribuir al conocimiento del proceso de mestizaje observado en nuestro país,
-                        así como también reconstruir información genética no observada previamente en otros grupos
-                        participantes del proyecto “1000 Genomes” u otros proyectos antropológicos relevantes.
+                        <? if (is_english()) echo get_field( "expected_results_1_phase_1" ); else echo get_field( "resultados_esperados_1_etapa_1"); ?>
                     </p>
                     <p class="text-justify">
-                        Poder realizar una comparación de los resultados obtenidos con otras técnicas genéticas y sugerir un
-                        conjunto de marcadores que podrían representar mejor la ancestría de los grupos considerados.
+                        <? if (is_english()) echo get_field( "expected_results_2_phase_1" ); else echo get_field( "resultados_esperados_2_etapa_1"); ?>
                     </p>
                     <p class="text-justify">
-                        Desarrollar una base de datos para almacenar la información genómica ya procesada, al tiempo que se
-                        desarrollarán una serie de herramientas para facilitar el análisis de la información por parte de
-                        otros investigadores y la visualización de la misma por parte del público en general.
+                        <? if (is_english()) echo get_field( "expected_results_3_phase_1" ); else echo get_field( "resultados_esperados_3_etapa_1"); ?>
                     </p>
                 </div>
 
@@ -234,22 +222,18 @@ get_header(); ?>
                         <div class="col-4">
                             <picture>
                                 <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage02.svg" type="image/svg+xml">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage02.svg" class="img-fluid" alt="Etapa 1">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage02.svg" class="img-fluid" alt="Etapa 2">
                             </picture>
                         </div>
                         <div class="col-6 align-self-center">
-                            <h5 class="font-weight-bold margin-bottom-0">Estudios de ancestría en dos grupos étnicos de Uruguay</h5>
+                            <h5 class="font-weight-bold margin-bottom-0"><? if (is_english()) echo get_field( "phase_2_title" ); else echo get_field( "titulo_etapa_2" ); ?></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-5 align-self-center">
                     <div class="arrow_box-white">
                         <p class="margin-bottom-0">
-                            La primera fase del proyecto se centró en determinar y
-                            caracterizar la variabilidad genética en dos grupos étnicos en
-                            nuestro país: los descendientes indígenas y africanos.
-                            Para determinar esto, se utilizó la secuenciación del
-                            genoma completo.
+                            <? if (is_english()) echo get_field( "description_phase_2" ); else echo get_field( "descripcion_etapa_2"); ?>
                         </p>
                     </div>
                 </div>
@@ -259,7 +243,7 @@ get_header(); ?>
                 <div class="col-6 ">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4>OBJETIVOS ESPECÍFICOS</h4>
+                            <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
@@ -273,7 +257,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Secuenciar 10 individuos de cada grupo étnico, con un “coverage” esperado de 30x.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_1_phase_2" ); else echo get_field( "objetivo_especifico_1_etapa_2"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -285,7 +269,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Realizar un análisis de variación en cada grupo y comparar los datos con los resultados de otros proyectos internacionales, como el “1000 genomes”.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_2_phase_2" ); else echo get_field( "objetivo_especifico_2_etapa_2"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -297,8 +281,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Identificar los patrones de variabilidad genética de los
-                                grupos y relacionarla con los datos históricos existentes y estudios antropológicos previos.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_3_phase_2" ); else echo get_field( "objetivo_especifico_3_etapa_2"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -310,10 +293,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Comparar los resultados obtenidos en términos de
-                                ancestría a través del estudio del genoma completo
-                                con los resultados previos a partir de marcadores
-                                mitocondriales y del cromosoma Y.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_4_phase_2" ); else echo get_field( "objetivo_especifico_4_etapa_2"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -325,8 +305,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">En el caso del grupo étnico descendientes de indígenas
-                                se procurará la reconstrucción del mayor número posible de haplotipos a nivel genómico, procurando identificar aquellos que no hayan sido previamente reportados.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_5_phase_2" ); else echo get_field( "objetivo_especifico_5_etapa_2"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -338,7 +317,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Desarrollo de una base de datos con la información genómica, accesible públicamente y una serie de herramientas para facilitar el análisis de la información contenida.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_6_phase_2" ); else echo get_field( "objetivo_especifico_6_etapa_2"); ?></p>
                         </div>
                     </div>
                 </div>
@@ -346,26 +325,19 @@ get_header(); ?>
 
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4 class="text-center">RESULTADOS ESPERADOS</h4>
+                            <h4 class="text-center"><? if (is_english()) echo "EXPECTED RESULTS"; else echo "RESULTADOS ESPERADOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
 
                     <p class="text-justify" style="margin-top: 4%;">
-                        Tener la caracterización de la variabilidad genética observada en ambos grupos étnicos y su
-                        comparación con el conocimiento histórico y antropológico previo. También se espera
-                        constribuir al conocimiento del proceso de mestizaje observado en nuestro país,
-                        así como también reconstruir información genética no observada previamente en otros grupos
-                        participantes del proyecto “1000 Genomes” u otros proyectos antropológicos relevantes.
+                        <? if (is_english()) echo get_field( "expected_results_1_phase_2" ); else echo get_field( "resultados_esperados_1_etapa_2"); ?>
                     </p>
                     <p class="text-justify">
-                        Poder realizar una comparación de los resultados obtenidos con otras técnicas genéticas y sugerir un
-                        conjunto de marcadores que podrían representar mejor la ancestría de los grupos considerados.
+                        <? if (is_english()) echo get_field( "expected_results_2_phase_2" ); else echo get_field( "resultados_esperados_2_etapa_2"); ?>
                     </p>
                     <p class="text-justify">
-                        Desarrollar una base de datos para almacenar la información genómica ya procesada, al tiempo que se
-                        desarrollarán una serie de herramientas para facilitar el análisis de la información por parte de
-                        otros investigadores y la visualización de la misma por parte del público en general.
+                        <? if (is_english()) echo get_field( "expected_results_3_phase_2" ); else echo get_field( "resultados_esperados_3_etapa_2"); ?>
                     </p>
                 </div>
             </div>
@@ -391,22 +363,18 @@ get_header(); ?>
                         <div class="col-4">
                             <picture>
                                 <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage03.svg" type="image/svg+xml">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage03.svg" class="img-fluid" alt="Etapa 1">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/stage03.svg" class="img-fluid" alt="Etapa 3">
                             </picture>
                         </div>
                         <div class="col-6 align-self-center">
-                            <h5 class="font-weight-bold margin-bottom-0">Estudios de ancestría en dos grupos étnicos de Uruguay</h5>
+                            <h5 class="font-weight-bold margin-bottom-0"><? if (is_english()) echo get_field( "phase_3_title" ); else echo get_field( "titulo_etapa_3" ); ?></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-5 align-self-center">
                     <div class="arrow_box">
                         <p class="margin-bottom-0">
-                            La primera fase del proyecto se centró en determinar y
-                            caracterizar la variabilidad genética en dos grupos étnicos en
-                            nuestro país: los descendientes indígenas y africanos.
-                            Para determinar esto, se utilizó la secuenciación del
-                            genoma completo.
+                            <? if (is_english()) echo get_field( "description_phase_3" ); else echo get_field( "descripcion_etapa_3"); ?>
                         </p>
                     </div>
                 </div>
@@ -416,7 +384,7 @@ get_header(); ?>
                 <div class="col-6 ">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4>OBJETIVOS ESPECÍFICOS</h4>
+                            <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
@@ -430,7 +398,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Secuenciar 10 individuos de cada grupo étnico, con un “coverage” esperado de 30x.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_1_phase_3" ); else echo get_field( "objetivo_especifico_1_etapa_3"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -442,7 +410,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Realizar un análisis de variación en cada grupo y comparar los datos con los resultados de otros proyectos internacionales, como el “1000 genomes”.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_2_phase_3" ); else echo get_field( "objetivo_especifico_2_etapa_3"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -454,8 +422,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Identificar los patrones de variabilidad genética de los
-                                grupos y relacionarla con los datos históricos existentes y estudios antropológicos previos.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_3_phase_3" ); else echo get_field( "objetivo_especifico_3_etapa_3"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -467,10 +434,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Comparar los resultados obtenidos en términos de
-                                ancestría a través del estudio del genoma completo
-                                con los resultados previos a partir de marcadores
-                                mitocondriales y del cromosoma Y.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_4_phase_3" ); else echo get_field( "objetivo_especifico_4_etapa_3"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -482,8 +446,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">En el caso del grupo étnico descendientes de indígenas
-                                se procurará la reconstrucción del mayor número posible de haplotipos a nivel genómico, procurando identificar aquellos que no hayan sido previamente reportados.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_5_phase_3" ); else echo get_field( "objetivo_especifico_5_etapa_3"); ?></p>
                         </div>
                     </div>
                     <div class="row more-space">
@@ -495,7 +458,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0">Desarrollo de una base de datos con la información genómica, accesible públicamente y una serie de herramientas para facilitar el análisis de la información contenida.</p>
+                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_6_phase_3" ); else echo get_field( "objetivo_especifico_6_etapa_3"); ?></p>
                         </div>
                     </div>
                 </div>
@@ -503,26 +466,19 @@ get_header(); ?>
 
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h4 class="text-center">RESULTADOS ESPERADOS</h4>
+                            <h4 class="text-center"><? if (is_english()) echo "EXPECTED RESULTS"; else echo "RESULTADOS ESPERADOS"; ?></h4>
                             <div class="underline_middle"></div>
                         </div>
                     </div>
 
                     <p class="text-justify" style="margin-top: 4%;">
-                        Tener la caracterización de la variabilidad genética observada en ambos grupos étnicos y su
-                        comparación con el conocimiento histórico y antropológico previo. También se espera
-                        constribuir al conocimiento del proceso de mestizaje observado en nuestro país,
-                        así como también reconstruir información genética no observada previamente en otros grupos
-                        participantes del proyecto “1000 Genomes” u otros proyectos antropológicos relevantes.
+                        <? if (is_english()) echo get_field( "expected_results_1_phase_3" ); else echo get_field( "resultados_esperados_1_etapa_3"); ?>
                     </p>
                     <p class="text-justify">
-                        Poder realizar una comparación de los resultados obtenidos con otras técnicas genéticas y sugerir un
-                        conjunto de marcadores que podrían representar mejor la ancestría de los grupos considerados.
+                        <? if (is_english()) echo get_field( "expected_results_2_phase_3" ); else echo get_field( "resultados_esperados_2_etapa_3"); ?>
                     </p>
                     <p class="text-justify">
-                        Desarrollar una base de datos para almacenar la información genómica ya procesada, al tiempo que se
-                        desarrollarán una serie de herramientas para facilitar el análisis de la información por parte de
-                        otros investigadores y la visualización de la misma por parte del público en general.
+                        <? if (is_english()) echo get_field( "expected_results_3_phase_3" ); else echo get_field( "resultados_esperados_3_etapa_3"); ?>
                     </p>
                 </div>
             </div>
@@ -534,7 +490,6 @@ get_header(); ?>
         </div>
     </div>
     <!-- end stage 03 -->
-
 
 <?php
 get_footer();

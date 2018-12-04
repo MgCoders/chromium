@@ -20,7 +20,7 @@ get_header(); ?>
                 </picture>
             </div>
             <div class="col-2">
-                <h4 class="align-middle margin-bottom-0 "><? echo strtoupper(get_the_title()) ?></h4>
+                <h4 class="align-middle margin-bottom-0 "><?php echo strtoupper(get_the_title()) ?></h4>
             </div>
 
         </div>
