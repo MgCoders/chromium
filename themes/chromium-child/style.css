@@ -116,7 +116,7 @@
 
 .ribbon {
     text-align:center;
-    margin-bottom: 12px;
+    /*margin-bottom: 12px;*/
 }
 
 .msg-ribbon {
@@ -126,6 +126,9 @@
 
 }
 
+.padding-5-perc {
+    padding: 5%;
+}
 
 
 /*
@@ -243,6 +246,8 @@ body {
         margin-left: 30px;
     }
 }
+
+
 
  /*
  Extra small devices (portrait phones, less than 576px)
@@ -640,4 +645,36 @@ body:not(.theme-preset-active) footer#colophon {
 #partners-top-right,
 #partners-bottom {
     text-align: center;
+}
+
+
+
+@media (max-width: 575.98px) {
+    .underline {
+        margin-bottom: 0px;
+    }
+    .navbar-toggler {
+        width: 100%;
+    }
+    #main-nav {
+        text-align: center;
+    }
+    .margin-bottom-40 { /* reset */
+        margin-bottom: 0px;
+    }
+    .underline {
+        display: none;
+    }
+    h1 {
+        text-align: center;
+    }
+    .img-mate {
+        margin-bottom: 20px;
+    }
+    #main {
+        padding: 20px;
+    }
+    .entry-content {
+        margin: 0px;
+    }
 }

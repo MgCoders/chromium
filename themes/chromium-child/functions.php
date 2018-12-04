@@ -124,58 +124,65 @@ add_shortcode('wp_childpages', 'wp_list_child_pages');
  */
 function wp_print_objetivos() {
 
-    $obj = '<div class="row  justify-content-md-center margin-top-40">
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">MEJORAR</span></div>
-            </div>
-            <div class="col-1">
-            </div>
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">PRODUCIR</span></div>
-            </div>
-            <div class="col-1">
-            </div>
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">PROMOVER</span></div>
-            </div>
-        </div>
 
-        <div class="row  justify-content-md-center">
-            <div class="col-3">
-                <div class="small text-justify">el nivel de capacitación de los investigadores que trabajan en genómica en Uruguay, a través de la creación de un programa con Corea del Sur.</div>
-            </div>
-            <div class="col-3">
-                <div class="small text-justify">avances científicos y técnicos en la secuenciación y análisis de genomas humanos en Uruguay.</div>
-            </div>
-            <div class="col-3">
-                <div class="small text-justify">la creación de empresas y laboratorios que puedan exportar servicios en el campo de la genómica.</div>
-            </div>
-        </div>
-
-
-
-        <div class="row justify-content-md-center margin-top-40">
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">INCENTIVAR</span></div>
-            </div>
-            <div class="col-1">
-            </div>
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">DIFUNDIR</span></div>
+    $obj = '<div class="row  justify-content-center">
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                            <div class="ribbon"><span class="msg-ribbon">MEJORAR</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 col-sm-9">
+                            <div class="small text-justify padding-5-perc">el nivel de capacitación de los investigadores que trabajan en genómica en Uruguay, a través de la creación de un programa con Corea del Sur.</div>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="row justify-content-md-center">
-            <div class="col-3">
-                <div class="small text-justify">la integración en el campo de la genómica con América Latina.</div>
-            </div>
-            <div class="col-3">
-                <div class="small text-justify">los avances de la investigación genómica humana a comunidades científicas y académicas, relacionadas con el sector farmacéutico y social.
+            
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                        <div class="ribbon"><span class="msg-ribbon">PRODUCIR</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 col-sm-9">
+                            <div class="small text-justify padding-5-perc">avances científicos y técnicos en la secuenciación y análisis de genomas humanos en Uruguay.</div>
+                        </div>
+                    </div>
                 </div>
-
+            
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                        <div class="ribbon"><span class="msg-ribbon">PROMOVER</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">la creación de empresas y laboratorios que puedan exportar servicios en el campo de la genómica.</div>
+                    </div>
+                </div>
+           </div>
+        
+        <div class="row justify-content-center">
+            
+            <div class="col-sm-4">
+                <div class="row justify-content-center">
+                    <div class="ribbon"><span class="msg-ribbon">INCENTIVAR</span></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">la integración en el campo de la genómica con América Latina.</div>
+                    </div>
+                </div>
             </div>
+            <div class="col-sm-4">
+                <div class="row justify-content-center">
+                    <div class="ribbon"><span class="msg-ribbon">DIFUNDIR</span></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">los avances de la investigación genómica humana a comunidades científicas y académicas, relacionadas con el sector farmacéutico y social.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </div>';
 
     return $obj;

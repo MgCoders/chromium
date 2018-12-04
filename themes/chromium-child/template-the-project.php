@@ -11,48 +11,35 @@ get_header(); ?>
     </div><!-- .container -->
 
     <div class="container-fluid bg-title-page margin-bottom-40">
-        <div class="row justify-content-md-center align-items-center no-gutters padding-top-2 padding-bottom-2">
+        <div class="row justify-content-sm-center align-items-center no-gutters padding-top-2 padding-bottom-2">
             <div class="col-2 limit-width">
                 <picture>
                     <source  srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" type="image/svg+xml" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" class="img-fluid" alt="The project">
                 </picture>
             </div>
-            <div class="col-2">
+            <div class=" col-4 col-sm-2">
                 <h4 class="align-middle margin-bottom-0 "><?php echo strtoupper(get_the_title()) ?></h4>
             </div>
-
         </div>
-
     </div>
 
 
     <div class="container">
         <div class="row">
-
             <section id="primary" class="content-area col-sm-12">
 
                 <main id="main" class="site-main" role="main">
-
-
 
                     <?php
                     while ( have_posts() ) : the_post();
 
                         get_template_part( 'template-parts/content-notitle', 'page' );
 
-                        // If comments are open or we have at least one comment, load up the comment template.
-                        if ( comments_open() || get_comments_number() ) :
-                            comments_template();
-                        endif;
-
                     endwhile; // End of the loop.
                     ?>
-
                 </main><!-- #main -->
             </section><!-- #primary -->
-
-
         </div><!-- .row -->
     </div><!-- .container -->
 
@@ -75,11 +62,7 @@ get_header(); ?>
                             </picture>
                         </div>
                         <div class="col-6 align-self-center">
-
-
                             <h5 class="font-weight-bold margin-bottom-0"><? if (is_english()) echo get_field( "phase_1_title" ); else echo get_field( "titulo_etapa_1" ); ?></h5>
-
-
                         </div>
                     </div>
                 </div>
@@ -91,7 +74,6 @@ get_header(); ?>
                     </div>
                 </div>
                 <?php endwhile; // end of the loop. ?>
-
     </div>
 
             <div class="row stage-detail">
@@ -177,7 +159,6 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="col-5">
-
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4 class="text-center"><? if (is_english()) echo "EXPECTED RESULTS"; else echo "RESULTADOS ESPERADOS"; ?></h4>
@@ -195,7 +176,6 @@ get_header(); ?>
                         <? if (is_english()) echo get_field( "expected_results_3_phase_1" ); else echo get_field( "resultados_esperados_3_etapa_1"); ?>
                     </p>
                 </div>
-
             </div>
 
         </div>
