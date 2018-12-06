@@ -52,7 +52,7 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <?php while ( have_posts() ) : the_post(); ?>
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-4">
@@ -66,7 +66,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5 align-self-center">
+                <div class="col-5 align-self-center d-none d-sm-block">
                     <div class="arrow_box">
                         <p class="margin-bottom-0">
                             <? if (is_english()) echo get_field( "description_phase_1" ); else echo get_field( "descripcion_etapa_1"); ?>
@@ -76,8 +76,8 @@ get_header(); ?>
                 <?php endwhile; // end of the loop. ?>
     </div>
 
-            <div class="row stage-detail">
-                <div class="col-6 ">
+            <div class="row stage-detail ">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
@@ -158,7 +158,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-sm-5">
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4 class="text-center"><? if (is_english()) echo "EXPECTED RESULTS"; else echo "RESULTADOS ESPERADOS"; ?></h4>
@@ -210,7 +210,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5 align-self-center">
+                <div class="col-5 align-self-center  d-none d-sm-block">
                     <div class="arrow_box-white">
                         <p class="margin-bottom-0">
                             <? if (is_english()) echo get_field( "description_phase_2" ); else echo get_field( "descripcion_etapa_2"); ?>
@@ -220,7 +220,7 @@ get_header(); ?>
             </div>
 
             <div class="row stage-detail">
-                <div class="col-6 ">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
@@ -301,7 +301,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-sm-5">
 
                     <div class="row">
                         <div class="col-12 text-center">
@@ -351,7 +351,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5 align-self-center">
+                <div class="col-5 align-self-center  d-none d-sm-block">
                     <div class="arrow_box">
                         <p class="margin-bottom-0">
                             <? if (is_english()) echo get_field( "description_phase_3" ); else echo get_field( "descripcion_etapa_3"); ?>
@@ -361,7 +361,7 @@ get_header(); ?>
             </div>
 
             <div class="row stage-detail">
-                <div class="col-6 ">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4><? if (is_english()) echo "SPECIFIC OBJECTIVES"; else echo "OBJETIVOS ESPECÍFICOS"; ?></h4>
@@ -430,7 +430,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-sm-5">
 
                     <div class="row">
                         <div class="col-12 text-center">

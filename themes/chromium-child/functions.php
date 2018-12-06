@@ -61,7 +61,6 @@ add_action( 'wp_enqueue_scripts', 'my_custom_script_load' );
                     'use strict';
                     $( document ).on( 'ready', function() {
                             console.log(">>> ready <<<");
-//                            scream()
                     } );
                 } ( jQuery ) );
             </script>
@@ -191,21 +190,7 @@ add_shortcode('wp_objetivos', 'wp_print_objetivos');
 
 function wp_print_objetives() {
 
-    $obj = '<div class="row  justify-content-md-center margin-top-40">
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">IMPROVE</span></div>
-            </div>
-            <div class="col-1">
-            </div>
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">PRODUCE</span></div>
-            </div>
-            <div class="col-1">
-            </div>
-            <div class="col-2">
-                <div class="ribbon"><span class="msg-ribbon">FOSTER</span></div>
-            </div>
-        </div>
+    $obj = '
 
         <div class="row  justify-content-md-center">
             <div class="col-3">
@@ -243,6 +228,67 @@ function wp_print_objetives() {
                 </div>
 
             </div>
+        </div>';
+
+
+    $obj = '<div class="row  justify-content-center">
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                            <div class="ribbon"><span class="msg-ribbon">IMPROVE</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 col-sm-9">
+                            <div class="small text-justify padding-5-perc">the training of researchers working in genomics in Uruguay through the creation of a program with South Korea.</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                        <div class="ribbon"><span class="msg-ribbon">PRODUCE</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 col-sm-9">
+                            <div class="small text-justify padding-5-perc">scientific and technical advances in the sequencing and analysis of human genomes in Uruguay.</div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-4">
+                    <div class="row justify-content-center">
+                        <div class="ribbon"><span class="msg-ribbon">FOSTER</span></div>
+                    </div>
+                    <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">the creation of companies and laboratories that can export services in the field of genomics.</div>
+                    </div>
+                </div>
+           </div>
+        
+        <div class="row justify-content-center">
+            
+            <div class="col-sm-4">
+                <div class="row justify-content-center">
+                    <div class="ribbon"><span class="msg-ribbon">ENCOURAGE</span></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">integration in the field of genomics with Latin America.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row justify-content-center">
+                    <div class="ribbon"><span class="msg-ribbon">SPREAD</span></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-9">
+                        <div class="small text-justify padding-5-perc">the advances of human genomic research to scientific and academic communities related to the pharmaceutical and social sector.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </div>';
 
     return $obj;
