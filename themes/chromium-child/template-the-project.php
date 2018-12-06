@@ -18,7 +18,7 @@ get_header(); ?>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/02-the-project.svg" class="img-fluid" alt="The project">
                 </picture>
             </div>
-            <div class=" col-4 col-sm-2">
+            <div class="col-4 col-sm-2">
                 <h4 class="align-middle margin-bottom-0 "><?php echo strtoupper(get_the_title()) ?></h4>
             </div>
         </div>
@@ -196,7 +196,7 @@ get_header(); ?>
     <div id="stage2" class="container-fluid stage-container-dark">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-4">
@@ -337,7 +337,7 @@ get_header(); ?>
     <div id="stage3" class="container-fluid stage-container">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-4">
