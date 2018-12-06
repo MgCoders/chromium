@@ -509,6 +509,12 @@ function translateArray($str_index) {
     $en['Universidad de Wisconsin | Madison'] = 'University of Wisconsin | Madison';
     $en['Universidad de Lund | Suecia'] = 'University of Lund | Sweden';
 
+    $en['/nosotros'] = "/about-us";
+    $en['/el-proyecto'] = "/the-project";
+    $en['/publicaciones'] = "/publications";
+    $en['/prensa'] = "/press";
+    $en['/base-de-datos'] = "/databases";
+
     if (array_key_exists($str_index, $en)) {
         return $en[$str_index];
     }
@@ -517,6 +523,7 @@ function translateArray($str_index) {
     }
 
 }
+
 function getNameInEnglish( $en, $name) {
     if (!$en) {
         return $name;
@@ -533,7 +540,7 @@ function main_menu_html( $en ) {
                 <div class="row-menu-home">
                 <div class="row  justify-content-md-center text-center ">
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="' .  get_home_url() . '/nosotros">
+                        <a href="' .  get_home_url() . getNameInEnglish($en,"/nosotros") . '">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" type="image/svg+xml" >
                             <img src="'. get_stylesheet_directory_uri() .'/img/icons/01-about-us.svg" class="img-fluid" alt="Nosotros">
@@ -543,7 +550,7 @@ function main_menu_html( $en ) {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="' . get_home_url() . '/el-proyecto">
+                        <a href="' . get_home_url() . getNameInEnglish($en,"/el-proyecto") . '">
                         <picture>
                             <source  srcset="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" type="image/svg+xml" >
                             <img src="'. get_stylesheet_directory_uri() . '/img/icons/02-the-project.svg" class="img-fluid" alt="El proyecto">
@@ -553,7 +560,7 @@ function main_menu_html( $en ) {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="' . get_home_url() .'/publicaciones">
+                        <a href="' . get_home_url() . getNameInEnglish($en,"/publicaciones") . '">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" type="image/svg+xml" >
                             <img src="' .  get_stylesheet_directory_uri() . '/img/icons/03-publications.svg" class="img-fluid" alt="Publicaciones" >
@@ -563,7 +570,7 @@ function main_menu_html( $en ) {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="' . get_home_url() .'/prensa">
+                        <a href="' . get_home_url() . getNameInEnglish($en,"/prensa") . '">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() .'/img/icons/04-press.svg" type="image/svg+xml" >
                             <img src="' .  get_stylesheet_directory_uri() . '/img/icons/04-press.svg" class="img-fluid" alt="Prensa">
@@ -573,7 +580,7 @@ function main_menu_html( $en ) {
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-12">
-                        <a href="' . get_home_url() .'/base-de-datos">
+                        <a href="' . get_home_url() . getNameInEnglish($en,"/base-de-datos") . '">
                         <picture>
                             <source srcset="'. get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" type="image/svg+xml" >
                             <img src="'.  get_stylesheet_directory_uri() . '/img/icons/05-databases.svg" class="img-fluid" alt="Bases de datos">
