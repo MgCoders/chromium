@@ -11,11 +11,6 @@ get_header();
 
 
     ?>
-
-<script>
-    scream();
-</script>
-
     <?php echo main_menu_html(is_english()); ?>
 
 
