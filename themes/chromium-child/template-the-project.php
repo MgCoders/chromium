@@ -429,18 +429,6 @@ get_header(); ?>
                             <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_5_phase_3" ); else echo get_field( "objetivo_especifico_5_etapa_3"); ?></p>
                         </div>
                     </div>
-                    <div class="row more-space">
-                        <div class="col-1"></div>
-                        <div class="col-2">
-                            <picture>
-                                <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/numbers/6dark.svg" type="image/svg+xml">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/stages/numbers/6dark.svg" class="img-fluid" alt="06">
-                            </picture>
-                        </div>
-                        <div class="col-9 align-self-center text-justify margin-left-neg-5">
-                            <p class="margin-bottom-0"><? if (is_english()) echo get_field( "specific_objective_6_phase_3" ); else echo get_field( "objetivo_especifico_6_etapa_3"); ?></p>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-5">
 
@@ -456,9 +444,6 @@ get_header(); ?>
                     </p>
                     <p class="text-justify">
                         <? if (is_english()) echo get_field( "expected_results_2_phase_3" ); else echo get_field( "resultados_esperados_2_etapa_3"); ?>
-                    </p>
-                    <p class="text-justify">
-                        <? if (is_english()) echo get_field( "expected_results_3_phase_3" ); else echo get_field( "resultados_esperados_3_etapa_3"); ?>
                     </p>
                 </div>
             </div>
