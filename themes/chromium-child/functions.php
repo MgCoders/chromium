@@ -508,12 +508,28 @@ function translateArray($str_index) {
     $en['Proyectando la genómica uruguaya al mundo'] = 'Projecting Uruguayan genomics to the world';
     $en['Universidad de Wisconsin | Madison'] = 'University of Wisconsin | Madison';
     $en['Universidad de Lund | Suecia'] = 'University of Lund | Sweden';
+    $en['Facultad de Humanidades y'] = "Faculty of Humanities and";
+    $en['Ciencias de la Educación'] = "Education Sciences";
+    $en['Facultad de Ciencias'] = "Science Faculty";
 
     $en['/nosotros'] = "/about-us";
     $en['/el-proyecto'] = "/the-project";
     $en['/publicaciones'] = "/publications";
     $en['/prensa'] = "/press";
     $en['/base-de-datos'] = "/databases";
+
+
+    $en['SOCIOS'] = "PARTNERS";
+    $en['APOYA'] = "SUPPORT US";
+    $en['FINANCIA'] = "FINANCING";
+    $en['SOCIOS ESTRATÉGICOS'] = "STRATEGIC PARTNERS";
+    $en['COORDINADOR'] = "COORDINATOR";
+
+
+
+
+
+
 
     if (array_key_exists($str_index, $en)) {
         return $en[$str_index];

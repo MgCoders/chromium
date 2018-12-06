@@ -62,7 +62,7 @@ get_header();
                 <div id="partners-top-left" class="col-6">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS</h6>
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40"><?php echo getNameInEnglish(is_english(),"SOCIOS"); ?></h6>
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@ get_header();
                     <div class="col-6">
                         <div class="row  justify-content-center">
                             <div class="col-6 text-center">
-                                <h6 class="letter-spacing-title text-bold margin-bottom-40">APOYA</h6>
+                                <h6 class="letter-spacing-title text-bold margin-bottom-40"><?php echo getNameInEnglish(is_english(),"APOYA"); ?></h6>
                             </div>
                         </div>
                         <picture>
@@ -102,7 +102,7 @@ get_header();
                     <div class="col-6">
                         <div class="row justify-content-center">
                             <div class="col-6 text-center">
-                                <h6 class="letter-spacing-title text-bold margin-bottom-60">FINANCIA</h6>
+                                <h6 class="letter-spacing-title text-bold margin-bottom-60"><?php echo getNameInEnglish(is_english(),"FINANCIA"); ?></h6>
                             </div>
                         </div>
                         <picture>
@@ -117,7 +117,7 @@ get_header();
                 <div id="partners-bottom" class="col-12">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h6 class="letter-spacing-title text-bold margin-bottom-40">SOCIOS ESTRAT&Eacute;GICOS</h6>
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40"><?php echo getNameInEnglish(is_english(),"SOCIOS ESTRATÉGICOS"); ?></h6>
                         </div>
                     </div>
                     <div class="row  justify-content-center">
@@ -130,7 +130,7 @@ get_header();
                             </picture>
                             <div class="margin-top-5porc">
                                 <p class=" margin-bottom-0">Dr. H&eacute;ctor Romero</p>
-                                <p class=" margin-bottom-0"><small>Facultad de Ciencias | Udelar</small></p>
+                                <p class=" margin-bottom-0"><small><?php echo getNameInEnglish(is_english(),'Facultad de Ciencias') ?> | Udelar</small></p>
                             </div>
                         </div>
                         <div id="lund" class="col-3">
@@ -164,8 +164,8 @@ get_header();
                             </picture>
                             <div class="margin-top-5porc">
                                 <p class=" margin-bottom-0">Dra. M&oacute;nica Sans</p>
-                                <p class=" margin-bottom-0"><small>Facultad de Humanidades y</small></p>
-                                <p><small>Ciencias de la Educaci&oacute;n | Udelar</small></p>
+                                <p class=" margin-bottom-0"><small><?php echo getNameInEnglish(is_english(),'Facultad de Humanidades y') ?> </small></p>
+                                <p><small><?php echo getNameInEnglish(is_english(),'Ciencias de la Educación') ?> | Udelar</small></p>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@ get_header();
                 <div id="partners-bottom" class="col-12">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <h6 class="letter-spacing-title text-bold margin-bottom-40">COORDINADOR</h6>
+                            <h6 class="letter-spacing-title text-bold margin-bottom-40"><?php echo getNameInEnglish(is_english(),"COORDINADOR"); ?></h6>
                         </div>
                     </div>
                     <div class="row  justify-content-center">
